@@ -1,0 +1,73 @@
+CREATE TABLE EMPLOYEE
+(
+  EMP_CODE NUMBER(4) PRIMARY KEY,
+  EMP_NAME VARCHAR2(50) NOT NULL,
+  DESIGN VARCHAR2(50) NOT NULL,
+  DOJ DATE NULL,
+  BASIC NUMBER(6,2) DEFAULT 0,
+  DEPT_CODE NUMBER(2) REFERENCES DEPARMENT(DEPT_CODE)
+);
+
+DESCR EMPLOYEE;
+
+SELECT * FROM DEPARMENT;
+
+INSERT INTO DEPARMENT VALUES(15,'B.SC',5);
+
+SELECT * FROM DEPARMENT;
+
+DESCR EMPLOYEE;
+
+INSERT INTO EMPLOYEE VALUES(1,'RAMLAL','ASSISTENCE','15-JAN-99',6000,11);
+
+Create Table Employee3
+(
+Emp_Code Number(4) Primary Key, 
+Emp_Name Varchar2(50) Not Null, 
+Design Varchar2(50) Not Null, 
+DOJ Date Not Null, 
+Basic Number(6,2) Default 0,
+dept_code number(4) references deparment1(dept_code));
+
+
+
+INSERT INTO EMPLOYEE2 VALUES(100,'RAMLAL','ASSISTENCE','15-JAN-99',6000.00);
+
+descr deparment;
+
+select * from employee3;
+
+insert into employee3 values(108,'Kiran','Software','18-Apr-97',9000,16);
+
+select * from deparment1;
+
+descr employee1;
+
+create table Deparment1
+(
+  Dept_Code number(4) primary key,
+  Dept_name varchar2(50) not null,
+  Dept_location number(2) not null
+);
+
+insert into deparment1 values(16,'B.com',7);
+
+descr employee;
+
+alter table employee
+ add phone varchar2(11);
+
+alter table employee
+ add constraint chk_code check(Emp_code>100);
+
+alter table employee
+ modify emp_name varchar2(100);
+
+alter table employee
+ drop constraint chk_code;
+
+
+
+
+
+

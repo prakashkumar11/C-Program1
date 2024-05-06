@@ -1,0 +1,50 @@
+**Object As Function Arguments Pass By Reference**
+
+**Class Definition Syntax...
+class class_Name
+{
+	data member;
+	public :
+		data member;
+		member fuction;
+		return_type/data_type function_name(class_name&, class_name&);
+};
+
+**Class Definition Example...
+class total
+{
+	int num;
+	public :
+		void getdata(void);
+		void putdata(void);
+		void add(total&, total&);
+};
+
+**Function Definition Syntax...
+void class_name :: function_name(class_name &object, class_name &object)
+{
+	function body; // Do work using above objects
+}
+
+**Function Definition Example...
+void total :: add(total &x, total &y) // x and y are objects
+{
+	num = x.num + y.num;
+}
+
+**Object Declaration and Function Call or Passing Object(Reference)...
+
+int main()
+{
+	total a, b, result;
+
+	a.getdata();
+	b.getdata();
+
+	result.add(a,b); //Passing Objects
+
+	a.putdata();
+	b.putdata();
+
+	result.putdata();
+}
